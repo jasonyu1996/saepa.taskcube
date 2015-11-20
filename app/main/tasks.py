@@ -6,7 +6,6 @@ from datetime import time
 from datetime import timedelta
 from .exceptions import *
 
-
 def empty_validator(user):
     pass
 
@@ -31,6 +30,8 @@ def time_validator_generator(start, end):
             raise TimeNotMatchException()
     return time_validator
 
+def timer_validator():
+    pass
 
 TaskList = {
     '1': {
@@ -48,5 +49,10 @@ TaskList = {
         'name': '3',
         'validator': empty_validator,
         'credit': 3
+    },
+    '4': {
+        'name': '4',
+        'validator': timer_validator,
+        'credit': 4
     }
 }
